@@ -1,0 +1,77 @@
+{
+    "name": "jsdrupal/test-project",
+    "description": "Project template for testing Drupal's React Admin user interface",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/core": "~8.6",
+        "drush/drush": "^9.0.0",
+        "oomphinc/composer-installers-extender": "^1.1",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "justafish/drupal-admin-ui": "dev-master"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "^8.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "dev-site": [
+            "@php docroot/core/scripts/dev-site.php install",
+            "@php docroot/core/scripts/dev-site.php start"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "installer-types": ["library"],
+        "installer-paths": {
+            "docroot/vfancy": ["justafish/drupal-admin-ui"],
+            "docroot/core": ["type:drupal-core"],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset"
+            ],
+            "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+            "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Provide a single command to install & run Drupal": "https://www.drupal.org/files/issues/2911319-57-no-composer.patch",
+                "Provide a script to install a Drupal testsite": "https://www.drupal.org/files/issues/2926633-115.patch"
+            }
+        }
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}
