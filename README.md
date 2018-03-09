@@ -26,5 +26,5 @@ To stop the webserver quit the process.
 # Updating
 ```sh
 # All users can update the project dependencies using composer.
-composer udpate
+composer update
 ```
