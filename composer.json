@@ -15,13 +15,16 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/core": "~8.6",
+        "drupal/jsonapi": "^1.13",
         "oomphinc/composer-installers-extender": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "justafish/drupal-admin-ui": "dev-master"
+        "justafish/drupal-admin-ui-support": "dev-master"
     },
     "require-dev": {
-        "webflo/drupal-core-require-dev": "^8.0"
+        "webflo/drupal-core-require-dev": "^8.0",
+        "drush/drush": "^9.2"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -33,6 +36,7 @@
     "scripts": {
         "dev-site": [
             "@php docroot/core/scripts/dev-site.php install",
+            "@php bin/drush en -y jsonapi admin_ui_support",
             "@php docroot/core/scripts/dev-site.php start"
         ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
@@ -48,7 +52,8 @@
         ],
         "post-update-cmd": [
             "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+            "DrupalProject\\composer\\ScriptHandler::linkAdminSupportModule"
         ]
     },
     "extra": {
