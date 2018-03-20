@@ -10,7 +10,7 @@ Making testing the new react admin UI as simple as possible.
 
 ```sh
 # This command will take some time.
-composer create-project jsdrupal/test-project -s dev --prefer-dist
+composer create-project jsdrupal/drupal-admin-ui-demo -s dev --prefer-dist
 ```
 
 # Usage

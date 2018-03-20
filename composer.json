@@ -1,5 +1,5 @@
 {
-    "name": "jsdrupal/test-project",
+    "name": "jsdrupal/drupal-admin-ui-demo",
     "description": "Project template for testing Drupal's React Admin user interface",
     "type": "project",
     "license": "GPL-2.0-or-later",
