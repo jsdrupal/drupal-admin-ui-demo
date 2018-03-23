@@ -9,6 +9,7 @@ use Composer\Semver\Comparator;
 use DrupalFinder\DrupalFinder;
 use Symfony\Component\Filesystem\Filesystem;
 use Webmozart\PathUtil\Path;
+use Symfony\Component\Yaml\Yaml;
 class ScriptHandler {
   public static function createRequiredFiles(Event $event) {
     $fs = new Filesystem();
@@ -48,6 +49,22 @@ class ScriptHandler {
       $fs->mkdir($drupalRoot . '/sites/default/files', 0777);
       umask($oldmask);
       $event->getIO()->write("Create a sites/default/files directory with chmod 0777");
+    }
+
+    // Create a services.yml file with cors configured.
+    if (!$fs->exists($drupalRoot . '/sites/default/services.yml')) {
+      $fs->copy($drupalRoot . '/sites/default/default.services.yml', $drupalRoot . '/sites/default/services.yml');
+      $yaml = Yaml::parseFile($drupalRoot . '/sites/default/services.yml');
+      $yaml['parameters']['cors.config'] = [
+        'enabled' => TRUE,
+        'allowedHeaders' => ['*'],
+        'allowedMethods' => ['*'],
+        'allowedOrigins' => ['*'],
+        'exposedHeaders' => FALSE,
+        'maxAge' => FALSE,
+        'supportsCredentials' => TRUE,
+      ];
+      file_put_contents($drupalRoot . '/sites/default/services.yml', Yaml::dump($yaml));
     }
   }
   /**
