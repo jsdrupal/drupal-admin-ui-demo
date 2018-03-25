@@ -15,12 +15,12 @@ composer create-project jsdrupal/drupal-admin-ui-demo -s dev --prefer-dist
 
 # Usage
 ```sh
+cd drupal-admin-ui-demo
 composer run dev-site
 ```
 
-Visit the url displayed in the message on the command line. For example:
-http://localhost:62665/vfancy
-
+Drupal will be opened up in your default browser.
+Note: you cannot yet access from Drupal
 To stop the webserver quit the process.
 
 # Updating
