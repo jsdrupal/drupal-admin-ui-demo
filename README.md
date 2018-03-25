@@ -15,13 +15,18 @@ composer create-project jsdrupal/drupal-admin-ui-demo -s dev --prefer-dist
 
 # Usage
 ```sh
-composer run dev-site
+cd drupal-admin-ui-demo/docroot
+php core/scripts/drupal install
+../bin/drush en -y jsonapi admin_ui_support
+php core/scripts/drupal server
 ```
 
-Visit the url displayed in the message on the command line. For example:
-http://localhost:62665/vfancy
+Drupal will be opened up in your default browser.
+To access the new interface go to ```http://localhost:51569/vfancy```.
 
-To stop the webserver quit the process.
+Example URLs to visit:
+* ```/admin/people/permissions```
+
 
 # Updating
 ```sh
