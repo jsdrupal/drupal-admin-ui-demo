@@ -17,16 +17,12 @@ composer create-project jsdrupal/drupal-admin-ui-demo -s dev --prefer-dist
 ```sh
 cd drupal-admin-ui-demo/docroot
 php core/scripts/drupal install
-../bin/drush en -y jsonapi admin_ui_support
+../vendor/bin/drush en -y jsonapi admin_ui_support
 php core/scripts/drupal server
 ```
 
-Drupal will be opened up in your default browser.
-To access the new interface go to ```http://localhost:51569/vfancy```.
-
-Example URLs to visit:
+Drupal will be opened up in your default browser. Example URLs to visit:
 * ```/admin/people/permissions```
-
 
 # Updating
 ```sh
