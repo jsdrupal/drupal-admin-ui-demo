@@ -15,7 +15,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/core": "~8.6",
-        "drupal/jsonapi": "^1.13",
+        "drupal/jsonapi": "1.13.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
@@ -52,8 +52,7 @@
         ],
         "post-update-cmd": [
             "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "DrupalProject\\composer\\ScriptHandler::linkAdminSupportModule"
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
         ]
     },
     "extra": {
@@ -72,12 +71,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "Provide a single command to install & run Drupal": "https://www.drupal.org/files/issues/2018-03-24/2911319-171.patch",
-                "Provide a script to install a Drupal testsite": "https://www.drupal.org/files/issues/2926633-115.patch"
+                "Provide a single command to install & run Drupal": "https://www.drupal.org/files/issues/2018-04-11/2911319-2-191.patch"
             }
         }
-    },
-    "config": {
-        "bin-dir": "bin/"
     }
 }
