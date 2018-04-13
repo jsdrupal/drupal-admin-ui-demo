@@ -34,10 +34,18 @@
         ]
     },
     "scripts": {
-        "dev-site": [
-            "@php docroot/core/scripts/dev-site.php install",
-            "@php bin/drush en -y jsonapi admin_ui_support",
-            "@php docroot/core/scripts/dev-site.php start"
+        "install": [
+            "php docroot/core/scripts/drupal install standard --no-interaction",
+            "vendor/bin/drush en -y jsonapi admin_ui_support"
+        ],
+        "start": [
+            "cd docroot && php core/scripts/drupal server"
+        ],
+        "devify": [
+            "rm -rf docroot/vfancy",
+            "git clone https://github.com/jsdrupal/drupal-admin-ui docroot/vfancy",
+            "cp docroot/vfancy/.env docroot/vfancy/.env.local",
+            "cd docroot/vfancy && yarn install"
         ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": [
