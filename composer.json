@@ -15,7 +15,7 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/core": "~8.6",
-        "drupal/jsonapi": "1.13.0",
+        "drupal/jsonapi": "1.15.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
