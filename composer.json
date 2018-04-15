@@ -42,10 +42,11 @@
             "cd docroot && php core/scripts/drupal server"
         ],
         "devify": [
+            "git clone https://github.com/jsdrupal/drupal-admin-ui",
+            "cp drupal-admin-ui/.env drupal-admin-ui/.env.local",
+            "cd drupal-admin-ui && yarn install",
             "rm -rf docroot/vfancy",
-            "git clone https://github.com/jsdrupal/drupal-admin-ui docroot/vfancy",
-            "cp docroot/vfancy/.env docroot/vfancy/.env.local",
-            "cd docroot/vfancy && yarn install"
+            "ln -s drupal-admin-ui/build docroot/vfancy"
         ],
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "pre-install-cmd": [
