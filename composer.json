@@ -35,8 +35,8 @@
     },
     "scripts": {
         "install": [
-            "php docroot/core/scripts/drupal install standard --no-interaction",
-            "vendor/bin/drush en -y jsonapi admin_ui_support"
+            "cd docroot && php core/scripts/drupal install standard --no-interaction",
+            "cd docroot && ../vendor/bin/drush en -y jsonapi admin_ui_support"
         ],
         "start": [
             "cd docroot && php core/scripts/drupal server"
