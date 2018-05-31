@@ -82,7 +82,6 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "Provide a single command to install & run Drupal": "https://www.drupal.org/files/issues/2018-04-11/2911319-2-191.patch"
             }
         }
     }
