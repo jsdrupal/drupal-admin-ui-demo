@@ -38,9 +38,6 @@
             "cd docroot && php core/scripts/drupal install standard --no-interaction",
             "cd docroot && ../vendor/bin/drush en -y jsonapi admin_ui_support"
         ],
-        "start": [
-            "cd docroot && php core/scripts/drupal server"
-        ],
         "devify": [
             "git clone https://github.com/jsdrupal/drupal-admin-ui",
             "cp drupal-admin-ui/.env drupal-admin-ui/.env.local",
