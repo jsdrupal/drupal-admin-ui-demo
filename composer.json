@@ -33,6 +33,9 @@
             "scripts/composer/ScriptHandler.php"
         ]
     },
+    "config": {
+        "process-timeout": 0
+    },
     "scripts": {
         "install": [
             "cd docroot && php core/scripts/drupal install demo_umami --no-interaction",
