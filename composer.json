@@ -49,7 +49,7 @@
             "cp drupal-admin-ui/.env drupal-admin-ui/.env.local",
             "cd drupal-admin-ui && yarn install",
             "rm -rf docroot/vfancy",
-            "ln -s drupal-admin-ui/build docroot/vfancy",
+            "ln -s ../drupal-admin-ui/build docroot/vfancy",
             "rm -rf docroot/modules/contrib/drupal-admin-ui-support",
             "ln -s ../../../drupal-admin-ui/admin_ui_support docroot/modules/contrib/drupal-admin-ui-support"
         ],
