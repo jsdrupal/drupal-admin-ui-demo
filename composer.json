@@ -35,7 +35,7 @@
     },
     "scripts": {
         "install": [
-            "cd docroot && php core/scripts/drupal install standard --no-interaction",
+            "cd docroot && php core/scripts/drupal install demo_umami --no-interaction",
             "cd docroot && ../vendor/bin/drush en -y jsonapi admin_ui_support"
         ],
         "start": [
