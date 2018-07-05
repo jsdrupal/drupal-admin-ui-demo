@@ -37,7 +37,7 @@
         "process-timeout": 0
     },
     "scripts": {
-        "install": [
+        "setup": [
             "cd docroot && php core/scripts/drupal install demo_umami --no-interaction",
             "cd docroot && ../vendor/bin/drush en -y jsonapi admin_ui_support"
         ],
