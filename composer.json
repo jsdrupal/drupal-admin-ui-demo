@@ -24,7 +24,8 @@
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "~8.6",
-        "drush/drush": "^9.2"
+        "drush/drush": "^9.2",
+        "drupal/openapi": "1.x-dev"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
