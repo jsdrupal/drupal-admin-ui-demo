@@ -15,13 +15,11 @@
         "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/core": "~8.6",
-        "drupal/jsonapi": "1.19.0",
         "oomphinc/composer-installers-extender": "^1.1",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "justafish/drupal-admin-ui": "dev-master",
         "justafish/drupal-admin-ui-support": "dev-master",
-        "drupal/openapi": "1.x-dev"
     },
     "require-dev": {
         "webflo/drupal-core-require-dev": "~8.6",
