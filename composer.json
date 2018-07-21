@@ -82,6 +82,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/schemata": {
+                "Take the field label into account for entity references": "https://www.drupal.org/files/issues/2018-07-20/2987199-2.patch"
+            },
             "drupal/core": {
             }
         }
