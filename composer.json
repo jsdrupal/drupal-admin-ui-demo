@@ -83,6 +83,7 @@
         "enable-patching": true,
         "patches": {
             "drupal/schemata": {
+                "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch",
                 "Take the field label into account for entity references": "https://www.drupal.org/files/issues/2018-07-20/2987199-2.patch"
             },
             "drupal/core": {
