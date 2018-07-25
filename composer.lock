@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9dd640de02aee41468c8acf99bd53664",
+    "content-hash": "4d7bd8dd31d18f45694a45536c5d31fd",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -974,12 +974,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "ad692601ea2f04e8d72b255ec22ded66b3c2f3fa"
+                "reference": "7aa22bab6f97036506cb6750bd8b1d2d0e206058"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/ad692601ea2f04e8d72b255ec22ded66b3c2f3fa",
-                "reference": "ad692601ea2f04e8d72b255ec22ded66b3c2f3fa",
+                "url": "https://api.github.com/repos/drupal/core/zipball/7aa22bab6f97036506cb6750bd8b1d2d0e206058",
+                "reference": "7aa22bab6f97036506cb6750bd8b1d2d0e206058",
                 "shasum": ""
             },
             "require": {
@@ -1134,7 +1134,7 @@
                 "drupal/views": "self.version",
                 "drupal/views_ui": "self.version",
                 "drupal/workflows": "self.version",
-                "drupal/workspace": "self.version"
+                "drupal/workspaces": "self.version"
             },
             "require-dev": {
                 "behat/mink": "1.7.x-dev",
@@ -1204,7 +1204,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-07-22T12:51:10+00:00"
+            "time": "2018-07-25T06:42:16+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1370,6 +1370,7 @@
                     }
                 },
                 "patches_applied": {
+                    "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch",
                     "Take the field label into account for entity references": "https://www.drupal.org/files/issues/2018-07-20/2987199-2.patch"
                 }
             },
@@ -1805,12 +1806,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "5b607e4ee6e1fdde3a4e0d6b3a4278eab2a212e0"
+                "reference": "8cd4de099b99520eafa8b06ab2cbb1ad0b88f384"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/5b607e4ee6e1fdde3a4e0d6b3a4278eab2a212e0",
-                "reference": "5b607e4ee6e1fdde3a4e0d6b3a4278eab2a212e0",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/8cd4de099b99520eafa8b06ab2cbb1ad0b88f384",
+                "reference": "8cd4de099b99520eafa8b06ab2cbb1ad0b88f384",
                 "shasum": ""
             },
             "require": {
@@ -1822,7 +1823,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-07-21T07:29:11+00:00"
+            "time": "2018-07-25T11:56:28+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
@@ -4031,12 +4032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "d8adafd0ba04fcd5a3865400e2bd0500c683f981"
+                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/d8adafd0ba04fcd5a3865400e2bd0500c683f981",
-                "reference": "d8adafd0ba04fcd5a3865400e2bd0500c683f981",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
+                "reference": "f4efaf52fed6a98bf6037a04f3fdef94dc0c8841",
                 "shasum": ""
             },
             "require": {
@@ -4084,7 +4085,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-06-25T17:38:20+00:00"
+            "time": "2018-07-23T10:51:47+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
