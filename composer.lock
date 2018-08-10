@@ -1276,7 +1276,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/openapi",
-                "reference": "d7e7e618267b23d99b2cde5309a10c0b47ac051b"
+                "reference": "f253582f672ea5de5fa06463edfb0514d6755cfe"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -1292,8 +1292,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta1+4-dev",
-                    "datestamp": "1531494521",
+                    "version": "8.x-1.0-beta2+3-dev",
+                    "datestamp": "1532962984",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -1331,7 +1331,7 @@
                 "source": "http://cgit.drupalcode.org/openapi",
                 "issues": "http://drupal.org/project/issues/openapi"
             },
-            "time": "2018-07-19T13:16:16+00:00"
+            "time": "2018-07-30T17:06:09+00:00"
         },
         {
             "name": "drupal/schemata",
@@ -1806,12 +1806,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "8cd4de099b99520eafa8b06ab2cbb1ad0b88f384"
+                "reference": "55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/8cd4de099b99520eafa8b06ab2cbb1ad0b88f384",
-                "reference": "8cd4de099b99520eafa8b06ab2cbb1ad0b88f384",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88",
+                "reference": "55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88",
                 "shasum": ""
             },
             "require": {
@@ -1823,7 +1823,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-07-25T11:56:28+00:00"
+            "time": "2018-08-10T10:24:26+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
@@ -1831,12 +1831,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-support-dist.git",
-                "reference": "5c95dded17245f27f0c0b2413e4cd13121bd4a5a"
+                "reference": "764ebb795176a961fd38523aaf935c8d4af1503b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/5c95dded17245f27f0c0b2413e4cd13121bd4a5a",
-                "reference": "5c95dded17245f27f0c0b2413e4cd13121bd4a5a",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/764ebb795176a961fd38523aaf935c8d4af1503b",
+                "reference": "764ebb795176a961fd38523aaf935c8d4af1503b",
                 "shasum": ""
             },
             "require": {
@@ -1851,7 +1851,7 @@
                 "cweagans/composer-patches": "^1.6",
                 "drupal/coder": "^8.2",
                 "drupal/drupal-extension": "master-dev",
-                "drupal/openapi": "1.x-dev",
+                "drupal/openapi": "1.0.0-beta2",
                 "phpmd/phpmd": "^2.6",
                 "phpmetrics/phpmetrics": "^2.3"
             },
@@ -1861,7 +1861,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal support module for the v fancy React admin UI",
-            "time": "2018-07-21T07:28:58+00:00"
+            "time": "2018-07-30T15:30:21+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -7272,17 +7272,6 @@
         {
             "name": "webflo/drupal-core-require-dev",
             "version": "8.7.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "24877322f3a3a6f7a5beee20807499c1f4e057d2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/24877322f3a3a6f7a5beee20807499c1f4e057d2",
-                "reference": "24877322f3a3a6f7a5beee20807499c1f4e057d2",
-                "shasum": ""
-            },
             "require": {
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
