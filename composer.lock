@@ -1806,12 +1806,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88"
+                "reference": "6ed2fe685b9d43669028be4e05616d5201c2b07b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88",
-                "reference": "55d27c8cafaf8dddfb113a44ff4f5a6f8ef91d88",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/6ed2fe685b9d43669028be4e05616d5201c2b07b",
+                "reference": "6ed2fe685b9d43669028be4e05616d5201c2b07b",
                 "shasum": ""
             },
             "require": {
@@ -1823,7 +1823,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-08-10T10:24:26+00:00"
+            "time": "2018-08-11T12:24:47+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
