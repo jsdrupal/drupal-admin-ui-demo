@@ -1,0 +1,12 @@
+diff --git a/core/profiles/demo_umami/demo_umami.info.yml b/core/profiles/demo_umami/demo_umami.info.yml
+index 98be81fffe..e7e6549391 100644
+--- a/core/profiles/demo_umami/demo_umami.info.yml
++++ b/core/profiles/demo_umami/demo_umami.info.yml
+@@ -41,7 +41,6 @@ install:
+   - automated_cron
+   - responsive_image
+   - content_moderation
+-  - workflows
+ themes:
+   - seven
+   - umami
