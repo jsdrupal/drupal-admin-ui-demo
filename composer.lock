@@ -974,12 +974,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "a18210ae96e14dbbb45d81c3acf995ec29ed992b"
+                "reference": "5c048abd1caf7f4a665702b4f4482b6768d11233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/a18210ae96e14dbbb45d81c3acf995ec29ed992b",
-                "reference": "a18210ae96e14dbbb45d81c3acf995ec29ed992b",
+                "url": "https://api.github.com/repos/drupal/core/zipball/5c048abd1caf7f4a665702b4f4482b6768d11233",
+                "reference": "5c048abd1caf7f4a665702b4f4482b6768d11233",
                 "shasum": ""
             },
             "require": {
@@ -1182,9 +1182,7 @@
                     "replace": false,
                     "merge-extra": false
                 },
-                "patches_applied": {
-                    "Remove Umami dependency to Workflows because the admin UI doesn't currently support it": "patches/remove-umami-workflows-dependency.patch"
-                }
+                "patches_applied": []
             },
             "autoload": {
                 "psr-4": {
@@ -1207,7 +1205,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-08-20T09:46:07+00:00"
+            "time": "2018-08-20T10:09:48+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1809,12 +1807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "437a8e4b2ee27e9fb69ba87086336dc92cc95a2c"
+                "reference": "ec30a877da52ad5d79d222dc4266fa2510cba975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/437a8e4b2ee27e9fb69ba87086336dc92cc95a2c",
-                "reference": "437a8e4b2ee27e9fb69ba87086336dc92cc95a2c",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/ec30a877da52ad5d79d222dc4266fa2510cba975",
+                "reference": "ec30a877da52ad5d79d222dc4266fa2510cba975",
                 "shasum": ""
             },
             "require": {
@@ -1826,7 +1824,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-08-20T09:46:47+00:00"
+            "time": "2018-08-20T10:06:24+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
