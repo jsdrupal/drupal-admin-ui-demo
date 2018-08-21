@@ -974,12 +974,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "29d0093934d80bdc83caf6d0d95b0684a6ef560b"
+                "reference": "32ed9d4b135ca48cbb8ffdc4a57de7e8b726cf9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/29d0093934d80bdc83caf6d0d95b0684a6ef560b",
-                "reference": "29d0093934d80bdc83caf6d0d95b0684a6ef560b",
+                "url": "https://api.github.com/repos/drupal/core/zipball/32ed9d4b135ca48cbb8ffdc4a57de7e8b726cf9b",
+                "reference": "32ed9d4b135ca48cbb8ffdc4a57de7e8b726cf9b",
                 "shasum": ""
             },
             "require": {
@@ -1205,7 +1205,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-08-21T08:08:51+00:00"
+            "time": "2018-08-21T08:18:11+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1807,12 +1807,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "86f9f5f021419bf201be4851901ae955c6713b18"
+                "reference": "a024346fbec1fcda1ace269a3affd192e1c22eae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/86f9f5f021419bf201be4851901ae955c6713b18",
-                "reference": "86f9f5f021419bf201be4851901ae955c6713b18",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/a024346fbec1fcda1ace269a3affd192e1c22eae",
+                "reference": "a024346fbec1fcda1ace269a3affd192e1c22eae",
                 "shasum": ""
             },
             "require": {
@@ -1824,7 +1824,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-08-21T06:18:59+00:00"
+            "time": "2018-08-21T08:18:32+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
