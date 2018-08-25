@@ -401,10 +401,10 @@ index a576765dfa..564968462a 100644
    field_difficulty: true
 diff --git a/core/profiles/demo_umami/config/install/user.role.editor.yml b/core/profiles/demo_umami/config/install/user.role.editor.yml
 deleted file mode 100644
-index 11bb67c628..0000000000
+index e4dea00cab..0000000000
 --- a/core/profiles/demo_umami/config/install/user.role.editor.yml
 +++ /dev/null
-@@ -1,52 +0,0 @@
+@@ -1,46 +0,0 @@
 -langcode: en
 -status: true
 -dependencies: {  }
@@ -420,9 +420,7 @@ index 11bb67c628..0000000000
 -  - 'access toolbar'
 -  - 'cancel account'
 -  - 'change own username'
--  - 'create terms in ingredients'
 -  - 'create terms in recipe_category'
--  - 'create terms in recipe_cuisine'
 -  - 'create terms in tags'
 -  - 'create url aliases'
 -  - 'delete all revisions'
@@ -432,16 +430,12 @@ index 11bb67c628..0000000000
 -  - 'delete article revisions'
 -  - 'delete page revisions'
 -  - 'delete recipe revisions'
--  - 'delete terms in ingredients'
 -  - 'delete terms in recipe_category'
--  - 'delete terms in recipe_cuisine'
 -  - 'delete terms in tags'
 -  - 'edit any article content'
 -  - 'edit any page content'
 -  - 'edit any recipe content'
--  - 'edit terms in ingredients'
 -  - 'edit terms in recipe_category'
--  - 'edit terms in recipe_cuisine'
 -  - 'edit terms in tags'
 -  - 'revert all revisions'
 -  - 'revert article revisions'
