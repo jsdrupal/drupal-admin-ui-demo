@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "585ea7d7007ae069ad02237c764fa44c",
@@ -1183,7 +1183,9 @@
                     "replace": false,
                     "merge-extra": false
                 },
-                "patches_applied": []
+                "patches_applied": {
+                    "Remove Umami dependency to Workflows because the admin UI doesn't currently support it": "patches/remove-umami-workflows-dependency.patch"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -7364,17 +7366,6 @@
         {
             "name": "webflo/drupal-core-require-dev",
             "version": "8.7.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "24877322f3a3a6f7a5beee20807499c1f4e057d2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/24877322f3a3a6f7a5beee20807499c1f4e057d2",
-                "reference": "24877322f3a3a6f7a5beee20807499c1f4e057d2",
-                "shasum": ""
-            },
             "require": {
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
