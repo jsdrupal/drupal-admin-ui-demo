@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "fbaba755bd24833be025523fbae0cf7a0857c011"
+                "reference": "9c124168a82eda9ff44b70928b8d348d72cbde04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/fbaba755bd24833be025523fbae0cf7a0857c011",
-                "reference": "fbaba755bd24833be025523fbae0cf7a0857c011",
+                "url": "https://api.github.com/repos/drupal/core/zipball/9c124168a82eda9ff44b70928b8d348d72cbde04",
+                "reference": "9c124168a82eda9ff44b70928b8d348d72cbde04",
                 "shasum": ""
             },
             "require": {
@@ -1208,7 +1208,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-09-12T00:17:47+00:00"
+            "time": "2018-09-12T11:27:49+00:00"
         },
         {
             "name": "drupal/jsonapi",
