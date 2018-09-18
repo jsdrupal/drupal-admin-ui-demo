@@ -276,10 +276,10 @@ index 9a896e5a33..682f1a550c 100644
      settings:
        match_operator: CONTAINS
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.node.recipe.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.node.recipe.default.yml
-index 42cd68e0be..56a53cb3c0 100644
+index 5c3431958d..fa4072fb6d 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.node.recipe.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.node.recipe.default.yml
-@@ -16,7 +16,6 @@ dependencies:
+@@ -15,7 +15,6 @@ dependencies:
      - image.style.thumbnail
      - node.type.recipe
    module:
@@ -287,7 +287,7 @@ index 42cd68e0be..56a53cb3c0 100644
      - image
      - path
      - text
-@@ -117,12 +116,6 @@ content:
+@@ -107,12 +106,6 @@ content:
      third_party_settings: {  }
      type: entity_reference_autocomplete_tags
      region: content
@@ -367,38 +367,39 @@ index ce8cd320fe..bc7a68c5b5 100644
 -  content_moderation_control: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.default.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.default.yml
-index 2e3a34540a..593a9b0e91 100644
+index ac80368228..ae66a39c00 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.default.yml
-@@ -112,5 +112,4 @@ content:
+@@ -111,4 +111,4 @@ content:
      settings: {  }
      third_party_settings: {  }
  hidden:
 -  content_moderation_control: true
-   field_author: true
++  field_author: true
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.full.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.full.yml
-index 742d1afe26..9716bac8c6 100644
+index de50c44443..a16de0fe70 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.full.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.full.yml
-@@ -108,6 +108,5 @@ content:
+@@ -107,5 +107,5 @@ content:
      type: entity_reference_label
      region: content
  hidden:
 -  content_moderation_control: true
-   field_author: true
++  field_author: true
    links: true
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.teaser.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.teaser.yml
-index a576765dfa..564968462a 100644
+index e149ba9d07..f10a54d160 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.teaser.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.recipe.teaser.yml
-@@ -26,7 +26,6 @@ content:
+@@ -25,7 +25,7 @@ content:
      weight: 100
      region: content
  hidden:
 -  content_moderation_control: true
-   field_author: true
++  field_author: true
    field_cooking_time: true
    field_difficulty: true
+   field_image: true
 diff --git a/core/profiles/demo_umami/config/install/user.role.editor.yml b/core/profiles/demo_umami/config/install/user.role.editor.yml
 deleted file mode 100644
 index e4dea00cab..0000000000
@@ -538,7 +539,7 @@ index 98be81fffe..48de3411d6 100644
    - seven
    - umami
 diff --git a/core/profiles/demo_umami/modules/demo_umami_content/src/InstallHelper.php b/core/profiles/demo_umami/modules/demo_umami_content/src/InstallHelper.php
-index 1268189082..b9b855d55c 100644
+index 01e998e9b3..ebfc1dd7df 100644
 --- a/core/profiles/demo_umami/modules/demo_umami_content/src/InstallHelper.php
 +++ b/core/profiles/demo_umami/modules/demo_umami_content/src/InstallHelper.php
 @@ -81,41 +81,12 @@ public static function create(ContainerInterface $container) {
@@ -600,7 +601,7 @@ index 1268189082..b9b855d55c 100644
          ];
          // Set article author.
          if (!empty($data['author'])) {
-@@ -295,7 +264,6 @@ protected function importPages() {
+@@ -294,7 +263,6 @@ protected function importPages() {
          $values = [
            'type' => 'page',
            'title' => $data['title'],
@@ -608,7 +609,7 @@ index 1268189082..b9b855d55c 100644
          ];
          // Fields mapping starts.
          // Set Body Field.
-@@ -433,11 +401,10 @@ protected function getUser($name) {
+@@ -432,11 +400,10 @@ protected function getUser($name) {
      $user_storage = $this->entityTypeManager->getStorage('user');
      $users = $user_storage->loadByProperties(['name' => $name]);;
      if (empty($users)) {
