@@ -1,5 +1,5 @@
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.banner_block.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.banner_block.default.yml
-index c2727589d9..5dd5dd513f 100644
+index c2727589d9..5cc98ced6c 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.banner_block.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.banner_block.default.yml
 @@ -56,5 +56,4 @@ content:
@@ -10,7 +10,7 @@ index c2727589d9..5dd5dd513f 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.basic.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.basic.default.yml
-index a60d7db281..7ccb5b0ad3 100644
+index a60d7db281..97f5d00feb 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.basic.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.basic.default.yml
 @@ -28,5 +28,4 @@ content:
@@ -21,7 +21,7 @@ index a60d7db281..7ccb5b0ad3 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.disclaimer_block.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.disclaimer_block.default.yml
-index 386ff59c2a..a64f7c2805 100644
+index 386ff59c2a..052eea190d 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.disclaimer_block.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.disclaimer_block.default.yml
 @@ -36,5 +36,4 @@ content:
@@ -32,7 +32,7 @@ index 386ff59c2a..a64f7c2805 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.footer_promo_block.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.footer_promo_block.default.yml
-index 81b95045dd..041af3772b 100644
+index 81b95045dd..fc782fe716 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.footer_promo_block.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.block_content.footer_promo_block.default.yml
 @@ -56,5 +56,4 @@ content:
@@ -43,7 +43,7 @@ index 81b95045dd..041af3772b 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.media.audio.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.media.audio.default.yml
-index 38efab24a7..28979932bf 100644
+index 38efab24a7..a36135b3f5 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.media.audio.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.media.audio.default.yml
 @@ -55,5 +55,4 @@ content:
@@ -54,7 +54,7 @@ index 38efab24a7..28979932bf 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.media.file.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.media.file.default.yml
-index 16536c8127..da145039fc 100644
+index 16536c8127..db9b25551e 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.media.file.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.media.file.default.yml
 @@ -55,5 +55,4 @@ content:
@@ -65,7 +65,7 @@ index 16536c8127..da145039fc 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.media.image.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.media.image.default.yml
-index 06ab5d285e..fb18dfe483 100644
+index 06ab5d285e..c1139a8a39 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.media.image.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.media.image.default.yml
 @@ -57,5 +57,4 @@ content:
@@ -76,35 +76,15 @@ index 06ab5d285e..fb18dfe483 100644
 -  moderation_state: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.media.remote_video.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.media.remote_video.default.yml
-index d0924b7042..4752e75274 100644
+index d0924b7042..098a2ecc54 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.media.remote_video.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_form_display.media.remote_video.default.yml
-@@ -41,7 +41,7 @@ content:
-     third_party_settings: {  }
-   uid:
-     type: entity_reference_autocomplete
--    weight: 4
-+    weight: 5
-     settings:
-       match_operator: CONTAINS
-       size: 60
 @@ -49,5 +49,4 @@ content:
      region: content
      third_party_settings: {  }
  hidden:
 -  moderation_state: true
    name: true
-diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.media.video.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.media.video.default.yml
-index 6658cb930f..d0fa5049d5 100644
---- a/core/profiles/demo_umami/config/install/core.entity_form_display.media.video.default.yml
-+++ b/core/profiles/demo_umami/config/install/core.entity_form_display.media.video.default.yml
-@@ -55,5 +55,4 @@ content:
-       placeholder: ''
-     region: content
-     third_party_settings: {  }
--hidden:
--  moderation_state: true
-+hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_form_display.node.article.default.yml b/core/profiles/demo_umami/config/install/core.entity_form_display.node.article.default.yml
 index 50db6035b7..122c53e37c 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_form_display.node.article.default.yml
@@ -301,7 +281,7 @@ index 5c3431958d..fa4072fb6d 100644
      type: path
      weight: 16
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.default.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.default.yml
-index 66a013a76d..a544c6872e 100644
+index 66a013a76d..6fca71afd6 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.default.yml
 @@ -45,5 +45,4 @@ content:
@@ -312,7 +292,7 @@ index 66a013a76d..a544c6872e 100644
 -  content_moderation_control: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.full.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.full.yml
-index 55b9cc35d5..1375b02898 100644
+index 55b9cc35d5..b6fd2212e5 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.full.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.full.yml
 @@ -46,5 +46,4 @@ content:
@@ -333,19 +313,8 @@ index df4d92d8ec..da445c08d2 100644
 -  content_moderation_control: true
    field_image: true
    field_tags: true
-diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.teaser.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.teaser.yml
-index 23f4a07dd5..2731e1883a 100644
---- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.teaser.yml
-+++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.article.teaser.yml
-@@ -47,5 +47,4 @@ content:
-     region: content
-     settings: {  }
-     third_party_settings: {  }
--hidden:
--  content_moderation_control: true
-+hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.default.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.default.yml
-index 29e721a67f..8afd9423ec 100644
+index 29e721a67f..84a0bd9f28 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.default.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.default.yml
 @@ -22,5 +22,4 @@ content:
@@ -356,7 +325,7 @@ index 29e721a67f..8afd9423ec 100644
 -  content_moderation_control: true
 +hidden: {  }
 diff --git a/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.teaser.yml b/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.teaser.yml
-index ce8cd320fe..bc7a68c5b5 100644
+index ce8cd320fe..0904d2cfa6 100644
 --- a/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.teaser.yml
 +++ b/core/profiles/demo_umami/config/install/core.entity_view_display.node.page.teaser.yml
 @@ -24,5 +24,4 @@ content:
@@ -454,10 +423,10 @@ index e4dea00cab..0000000000
 -  - 'view the administration theme'
 diff --git a/core/profiles/demo_umami/config/install/workflows.workflow.editorial.yml b/core/profiles/demo_umami/config/install/workflows.workflow.editorial.yml
 deleted file mode 100644
-index 9959410e1e..0000000000
+index 601289de94..0000000000
 --- a/core/profiles/demo_umami/config/install/workflows.workflow.editorial.yml
 +++ /dev/null
-@@ -1,67 +0,0 @@
+@@ -1,68 +0,0 @@
 -langcode: en
 -status: true
 -dependencies:
@@ -525,6 +494,7 @@ index 9959410e1e..0000000000
 -      - article
 -      - page
 -      - recipe
+-  default_moderation_state: draft
 diff --git a/core/profiles/demo_umami/demo_umami.info.yml b/core/profiles/demo_umami/demo_umami.info.yml
 index 98be81fffe..48de3411d6 100644
 --- a/core/profiles/demo_umami/demo_umami.info.yml
@@ -623,10 +593,10 @@ index 01e998e9b3..ebfc1dd7df 100644
        ]);
        $user->enforceIsNew();
 diff --git a/core/profiles/demo_umami/tests/src/Functional/DemoUmamiProfileTest.php b/core/profiles/demo_umami/tests/src/Functional/DemoUmamiProfileTest.php
-index 940c8e2aa0..f6025fd603 100644
+index e27c6a19a3..8a1375d932 100644
 --- a/core/profiles/demo_umami/tests/src/Functional/DemoUmamiProfileTest.php
 +++ b/core/profiles/demo_umami/tests/src/Functional/DemoUmamiProfileTest.php
-@@ -89,12 +89,7 @@ protected function assertDefaultConfig(StorageInterface $default_config_storage,
+@@ -92,12 +92,7 @@ protected function assertDefaultConfig(StorageInterface $default_config_storage,
     * Tests the successful editing of nodes by admin.
     */
    public function testEditNodesByAdmin() {
@@ -640,7 +610,7 @@ index 940c8e2aa0..f6025fd603 100644
      $this->drupalLogin($account);
      $webassert = $this->assertSession();
  
-@@ -127,11 +122,10 @@ public function testAppearance() {
+@@ -130,11 +125,10 @@ public function testAppearance() {
    public function testDemonstrationWarningMessage() {
      $permissions = [
        'access content overview',
