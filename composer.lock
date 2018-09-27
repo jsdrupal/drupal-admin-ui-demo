@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "3a29c1e6b8c09736f76a6e9f925c01665491cf11"
+                "reference": "8498849c68bab56b860b2fc9563f4023856dacfa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/3a29c1e6b8c09736f76a6e9f925c01665491cf11",
-                "reference": "3a29c1e6b8c09736f76a6e9f925c01665491cf11",
+                "url": "https://api.github.com/repos/drupal/core/zipball/8498849c68bab56b860b2fc9563f4023856dacfa",
+                "reference": "8498849c68bab56b860b2fc9563f4023856dacfa",
                 "shasum": ""
             },
             "require": {
@@ -1208,7 +1208,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-09-20T13:17:39+00:00"
+            "time": "2018-09-26T09:43:01+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1367,7 +1367,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha3",
-                    "datestamp": "1521869040",
+                    "datestamp": "1537628284",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -1459,7 +1459,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha3",
-                    "datestamp": "1521869040",
+                    "datestamp": "1537628284",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -1811,12 +1811,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "bf5f40d2aa4887c32f53ba2ade8095dce67bea28"
+                "reference": "a7a1b317392c6850dab0509d5c2462c767e5a57a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/bf5f40d2aa4887c32f53ba2ade8095dce67bea28",
-                "reference": "bf5f40d2aa4887c32f53ba2ade8095dce67bea28",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/a7a1b317392c6850dab0509d5c2462c767e5a57a",
+                "reference": "a7a1b317392c6850dab0509d5c2462c767e5a57a",
                 "shasum": ""
             },
             "require": {
@@ -1828,7 +1828,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-09-14T13:56:56+00:00"
+            "time": "2018-09-20T14:01:59+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
