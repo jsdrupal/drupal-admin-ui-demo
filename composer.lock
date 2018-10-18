@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "dca106fcf296630d056660abd38c29dff0d91968"
+                "reference": "ddc8b8d7d1d0a3fb2efa74972c752dc60e748387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/dca106fcf296630d056660abd38c29dff0d91968",
-                "reference": "dca106fcf296630d056660abd38c29dff0d91968",
+                "url": "https://api.github.com/repos/drupal/core/zipball/ddc8b8d7d1d0a3fb2efa74972c752dc60e748387",
+                "reference": "ddc8b8d7d1d0a3fb2efa74972c752dc60e748387",
                 "shasum": ""
             },
             "require": {
@@ -1208,7 +1208,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-10-08T16:44:23+00:00"
+            "time": "2018-10-17T22:46:04+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1811,12 +1811,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "23c4bd65e00d0a128c8dd8d3949ba9fb376c7b60"
+                "reference": "bed5f46fa647a8c2f732364db614096f09ec9e51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/23c4bd65e00d0a128c8dd8d3949ba9fb376c7b60",
-                "reference": "23c4bd65e00d0a128c8dd8d3949ba9fb376c7b60",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/bed5f46fa647a8c2f732364db614096f09ec9e51",
+                "reference": "bed5f46fa647a8c2f732364db614096f09ec9e51",
                 "shasum": ""
             },
             "require": {
@@ -1828,7 +1828,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-09-27T11:31:04+00:00"
+            "time": "2018-10-09T11:15:21+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
@@ -4040,12 +4040,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/MinkSelenium2Driver.git",
-                "reference": "391cf14385d09570e9f6a7d34e4b5e1a7ebac83d"
+                "reference": "8684ee4e634db7abda9039ea53545f86fc1e105a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/391cf14385d09570e9f6a7d34e4b5e1a7ebac83d",
-                "reference": "391cf14385d09570e9f6a7d34e4b5e1a7ebac83d",
+                "url": "https://api.github.com/repos/minkphp/MinkSelenium2Driver/zipball/8684ee4e634db7abda9039ea53545f86fc1e105a",
+                "reference": "8684ee4e634db7abda9039ea53545f86fc1e105a",
                 "shasum": ""
             },
             "require": {
@@ -4093,7 +4093,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2018-10-03T14:49:03+00:00"
+            "time": "2018-10-10T12:39:06+00:00"
         },
         {
             "name": "chi-teck/drupal-code-generator",
