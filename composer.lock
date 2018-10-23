@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "8ccb69e236d091b45735759fd853ba039ccf056b"
+                "reference": "43f8b400efa97f2e052dad34b45638d8fddaf630"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/8ccb69e236d091b45735759fd853ba039ccf056b",
-                "reference": "8ccb69e236d091b45735759fd853ba039ccf056b",
+                "url": "https://api.github.com/repos/drupal/core/zipball/43f8b400efa97f2e052dad34b45638d8fddaf630",
+                "reference": "43f8b400efa97f2e052dad34b45638d8fddaf630",
                 "shasum": ""
             },
             "require": {
@@ -1075,6 +1075,7 @@
                 "drupal/core-transliteration": "self.version",
                 "drupal/core-utility": "self.version",
                 "drupal/core-uuid": "self.version",
+                "drupal/core-version": "self.version",
                 "drupal/datetime": "self.version",
                 "drupal/datetime_range": "self.version",
                 "drupal/dblog": "self.version",
@@ -1177,7 +1178,8 @@
                         "core/lib/Drupal/Component/Serialization/composer.json",
                         "core/lib/Drupal/Component/Transliteration/composer.json",
                         "core/lib/Drupal/Component/Utility/composer.json",
-                        "core/lib/Drupal/Component/Uuid/composer.json"
+                        "core/lib/Drupal/Component/Uuid/composer.json",
+                        "core/lib/Drupal/Component/Version/composer.json"
                     ],
                     "recurse": false,
                     "replace": false,
@@ -1208,7 +1210,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-10-20T07:14:35+00:00"
+            "time": "2018-10-22T10:38:57+00:00"
         },
         {
             "name": "drupal/jsonapi",
@@ -1811,12 +1813,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "770988c846e556a3362badacc43b74a68b6ac91f"
+                "reference": "0db9a29e7d9cd2500354623d648b20a6cc7a4ab0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/770988c846e556a3362badacc43b74a68b6ac91f",
-                "reference": "770988c846e556a3362badacc43b74a68b6ac91f",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/0db9a29e7d9cd2500354623d648b20a6cc7a4ab0",
+                "reference": "0db9a29e7d9cd2500354623d648b20a6cc7a4ab0",
                 "shasum": ""
             },
             "require": {
@@ -1828,7 +1830,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-10-18T12:30:17+00:00"
+            "time": "2018-10-21T21:22:07+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
