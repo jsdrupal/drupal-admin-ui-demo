@@ -1,0 +1,11 @@
+name: 'JSON API field access'
+type: module
+description: 'Provides a custom field access hook to test JSON API field access security.'
+package: Testing
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2018-07-19
+version: '8.x-1.23'
+core: '8.x'
+project: 'jsonapi'
+datestamp: 1532014094

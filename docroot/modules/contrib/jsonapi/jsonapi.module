@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Module implementation file.
+ */
+
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+
+/**
+ * Implements hook_help().
+ */
+function jsonapi_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.jsonapi':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('The JSON API module is a fully compliant implementation of the <a href=":spec">JSON API Specification</a>. By following shared conventions, you can increase productivity, take advantage of generalized tooling, and focus on what matters: your application. Clients built around JSON API are able to take advantage of its features such as efficiently caching responses, sometimes eliminating network requests entirely. For more information, see the <a href=":docs">online documentation for the JSON API module</a>.', [
+        ':spec' => 'http://jsonapi.org',
+        ':docs' => 'https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ',
+      ]) . '</p>';
+      $output .= '<dl>';
+      $output .= '<dt>' . t('General') . '</dt>';
+      $output .= '<dd>' . t('JSON API is a particular implementation of REST that provides conventions for resource relationships, collections, filters, pagination, and sorting, in addition to error handling and full test coverage. These conventions help developers build clients faster and encourages reuse of code.') . '</dd>';
+      $output .= '</dl>';
+
+      return $output;
+  }
+  return NULL;
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ *
+ * @todo This should probably live in core, but for now we will keep it as a
+ * temporary solution. There are similar unresolved efforts already happening
+ * there.
+ *
+ * @see https://www.drupal.org/node/2825487
+ */
+function jsonapi_entity_base_field_info(EntityTypeInterface $entity_type) {
+  $fields = [];
+  if ($entity_type->id() == 'file') {
+    $fields['url'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Download URL'))
+      ->setDescription(t('The download URL of the file.'))
+      ->setComputed(TRUE)
+      ->setCustomStorage(TRUE)
+      ->setClass('\Drupal\jsonapi\Field\FileDownloadUrl')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'weight' => -5,
+        'region' => 'hidden',
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+  }
+  return $fields;
+}
+
+/**
+ * Implements hook_entity_base_field_info().
+ */
+function jsonapi_entity_bundle_field_info(EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  $fields = [];
+
+  if (floatval(\Drupal::VERSION) < 8.6 && $entity_type->id() == 'taxonomy_term') {
+    // Only terms in the same bundle can be a parent.
+    $fields['parent'] = clone $base_field_definitions['parent'];
+    $fields['parent']->setSetting('handler_settings', ['target_bundles' => [$bundle]]);
+    return $fields;
+  }
+
+  return $fields;
+}

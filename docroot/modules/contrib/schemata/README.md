@@ -1,0 +1,177 @@
+# Schemata
+
+> Facilitate generation of schema definitions of Drupal 8 data models.
+
+[![GitHub tag](https://img.shields.io/github/tag/phase2/schemata.svg)](https://github.com/phase2/schemata) [![Website](https://img.shields.io/badge/website-drupal.org-blue.svg)](https://www.drupal.org/project/schemata) [![Build Status](https://travis-ci.org/phase2/schemata.svg?branch=8.x-1.x)](https://travis-ci.org/phase2/schemata)
+
+A schema is a declarative description of structured data that prescribes the
+rules for how that data can be created. Schemas are commonly used to provision
+relational storage, to generate forms or other user interfaces, to generate
+client library code, or to validate data.
+
+Schemata supports the creation of provider modules that create schemas to
+describe the different entities in a Drupal site (such as Nodes,
+Taxonomy Terms, and Users) as they are rendered in Drupal REST responses.
+This project ensures your Drupal site is able to deliver self-documenting
+machine descriptions of your API payloads, driven by the same configuration that
+Drupal uses to build forms and validate entities.
+
+In addition to the more abstract developer module named "Schemata", there is
+a reference implementation of a schema provider: Schemata JSON Schema, which
+provides [JSON Schema](http://json-schema.org/) support to define entities
+delivered in Drupal Core's JSON and HAL JSON REST formats, and the contrib
+module and format [JSON API](https://www.drupal.org/project/jsonapi).
+
+## What has a Schema?
+
+All Content Entity Types and Bundles have a schema automatically via the
+Schemata module. Core support for this kind of structured description of
+configuration does not exist yet.
+
+## Where is the Schema?
+
+Schemata are accessed via regular routes. Once enabled, Schemata resources are
+found at `/schemata/{entity_type}/{bundle?}`. These resources are dynamically
+generated based on your entity definitions, which means any change to fields on
+an Entity will automatically be reflected in the schema.
+
+## Requirements
+
+Drupal 8.3 is required for Schemata's generated schemas to validate your REST
+responses.
+
+Schemata-the-module is a dependency for the sub-modules of the project:
+
+* **Schemata JSON Schema**: A serializer which processes Schemata schema objects
+  into [JSON Schema v4](http://json-schema.org). Describes the output of content
+  entities via the core JSON, HAL and JSON API serializers.
+
+From a "product" standpoint, JSON Schema is the value, and Schemata
+the technical dependency. Only install Schemata if you plan to install a Schema
+provider module that depends on it.
+
+## Architecture
+
+The Schemata project contains the Schemata and Schemata JSON Schema modules.
+The Schemata module provides routes to retrieve a serialized, machine-readable
+schema. The schemas are assembled dynamically leveraging the
+[Typed Data API](https://www.drupal.org/node/1794140) and other site configuration.
+The schema for each entity type (and bundle) is exposed in the manner of a
+REST resource, accessible via GET requests designating the appropriate `_format`
+parameter to select a schema type and `_describes` to target a particular entity
+representation format supported by Drupal REST.
+
+In order to serialize the Schema object, the serializer must be able to support
+implementations of the Drupal\schemata\Schema\SchemaInterface class. At this
+time, the only serializer support for Schemata is within this project, you can
+see an example of this in the packaged submodule **Schemata JSON Schema**.
+
+## Usage
+
+You can obtain the schema either making an HTTP request or by using the
+programmatic API.
+
+Each schema type format should be contained in its own module. Enable the
+module for the format that you need first. For instance:
+
+```
+drush en -y schemata_json_schema
+```
+
+Finally you need to grant permission to access the data models to roles that
+need it. (`access schemata data models`)
+
+### Request
+
+Create a request against
+`/schemata/{entity_type}/{bundle}?_format={output_format}&_describes={described_format}`
+For instance:
+
+  * `/schemata/node/article?_format=schema_json&_describes=hal_json`
+  * `/schemata/user?_format=schema_json&_describes=api_json` (omit the bundle
+  if the entity type has no bundles).
+
+### Programmatically
+
+```php
+// Input variables.
+$entity_type_id = 'node';
+$bundle = 'article';
+$output_format = 'schema_json';
+$described_format = 'api_json';
+
+// Services.
+$schema_factory = \Drupal::service('schemata.schema_factory');
+$serializer = \Drupal::service('serializer');
+
+// Generate a Schema object.
+$schema = $schema_factory->create($entity_type_id, $bundle);
+
+// Render the schema as a string conforming to the selecting schema type.
+$format = $output_format . ':' . $described_format;
+$serializer->serialize($schema, $format);
+```
+
+### Related Projects
+
+Use the [Docson](https://www.drupal.org/project/docson) module to visualize
+the JSON Schemas generated by the Schemata module.
+
+Use the [OpenAPI](https://www.drupal.org/project/openapi) module to generate
+a Swagger v2 API definition specification, which can in turn be used by ecosystem
+of Swagger-based tools. For example, the [Swagger Tools page](https://swagger.io/tools/)
+and [ReDoc](https://rebilly.github.io/ReDoc/).
+
+## Contribute
+
+* Security reports should follow [Drupal.org security reporting procedures]
+(https://www.drupal.org/node/101494).
+* Other bugs and issues should be filed in the [Issue Queue](https://www.drupal.org/project/issues/schemata)
+* Code contributions should be submitted as a [Pull Request in Github](https://github.com/phase2/schemata)
+
+## URLs
+
+* [Homepage]()
+* [Development](https://github.com/phase2/schemata)
+
+## Maintainers
+
+Adam Ross a.k.a. Grayside
+
+## Contributors
+
+Creation of this module was sponsored by
+[Norwegian Cruise Line](https://www.drupal.org/norwegian-cruise-line).
+
+Fubhy's work on [GraphQL](https://www.drupal.org/project/graphql) was a great
+help in early architecture of this project. Thank you to
+[Fubhy](https://www.drupal.org/u/fubhy) and the GraphQL sponsors.
+
+## F.A.Q.
+
+### Will there be a Drupal 7 backport?
+
+This module can be summarized as follows:
+
+A Drupal 8 subsystem (routing) and a Symfony subsystem (Serialization) use a
+touchy Drupal 8 subsystem (Typed Data) to describe the output of another
+Drupal 8 subsystem (Entity).
+
+It gets worse--the use cases of this module are most applicable when said entity
+output comes by way of the routing and Serialization systems.
+
+It does not make sense to discuss a backport unless you first backport large
+swathes of Drupal 8.
+
+### Why not use some other module?
+
+[Self Documenting REST API](https://www.drupal.org/project/rest_api_doc)
+produces webpage reports about REST resources on the site. This project might
+eventually compete with that if it builds out support for the
+[Swagger specification](http://swagger.io/).
+
+[Field Report](https://www.drupal.org/project/field_report) enhances the core
+reports about fields and content types. This has some similarity with this
+project, but the reports provided by Field Report are for people orienting on
+a site. This project produces schemas that can be used for machine integrations
+or feeding into other report generation systems.

@@ -1,0 +1,3 @@
+access jsonapi resource list:
+  description: 'Gives access to the list of resources served by the JSON API module.'
+  title: 'Access JSON API resource list'

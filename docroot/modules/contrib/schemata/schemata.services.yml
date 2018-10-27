@@ -1,0 +1,25 @@
+services:
+  serializer.encoder.json_schema:
+    class: Drupal\schemata\Encoder\JsonSchemaEncoder
+    tags:
+      - { name: encoder, priority: 10, format: 'schema_json' }
+
+  # Assemble Schemas based on entity type definitions. As a standalone class,
+  # the SchemaFactory can be pulled in to custom menu routes, drush commands,
+  # and REST plugins. The SchemaFactory::create() creates instances of
+  # Drupal\schemata\Schema\SchemaInterface.
+  schemata.schema_factory:
+    class: Drupal\schemata\SchemaFactory
+    arguments:
+      - '@logger.channel.schemata'
+      - '@entity_type.manager'
+      - '@entity_type.bundle.info'
+      - '@typed_data_manager'
+      - '@config.typed'
+
+  # Create a log channel for this module. This simplifies logging setup code in
+  # this code that will do logging. As a tradeoff, it also adds this fairly
+  # specific logging channel to the system for all requests.
+  logger.channel.schemata:
+    parent: logger.channel_base
+    arguments: ['schemata']
