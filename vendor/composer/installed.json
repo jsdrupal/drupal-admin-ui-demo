@@ -1848,12 +1848,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/drupal/core.git",
-            "reference": "1cf97aab71729db81a7b7908c46e0799899a352c"
+            "reference": "a5e7f77ed4ffaad1288535fd3a42a52274d7c181"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/drupal/core/zipball/1cf97aab71729db81a7b7908c46e0799899a352c",
-            "reference": "1cf97aab71729db81a7b7908c46e0799899a352c",
+            "url": "https://api.github.com/repos/drupal/core/zipball/a5e7f77ed4ffaad1288535fd3a42a52274d7c181",
+            "reference": "a5e7f77ed4ffaad1288535fd3a42a52274d7c181",
             "shasum": ""
         },
         "require": {
@@ -2026,7 +2026,7 @@
             "symfony/debug": "^3.4.0",
             "symfony/phpunit-bridge": "^3.4.3"
         },
-        "time": "2018-10-26T22:58:52+00:00",
+        "time": "2018-11-02T11:58:11+00:00",
         "type": "drupal-core",
         "extra": {
             "merge-plugin": {
@@ -7246,6 +7246,17 @@
         "name": "webflo/drupal-core-require-dev",
         "version": "8.7.x-dev",
         "version_normalized": "8.7.9999999.9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/webflo/drupal-core-require-dev.git",
+            "reference": "f551d0b71bbfd10444f5d8805ebf2052fb155a46"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/f551d0b71bbfd10444f5d8805ebf2052fb155a46",
+            "reference": "f551d0b71bbfd10444f5d8805ebf2052fb155a46",
+            "shasum": ""
+        },
         "require": {
             "behat/mink": "1.7.x-dev",
             "behat/mink-goutte-driver": "^1.2",
