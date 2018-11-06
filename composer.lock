@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "585ea7d7007ae069ad02237c764fa44c",
+    "content-hash": "62bb90e65f5ad9f46e4fa57a4e8f219a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -975,12 +975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "9f9122ec7790ae3583a75f6e1e85450714567280"
+                "reference": "4e3ff46396a4a9587980d177e4a35dc49472e6ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/9f9122ec7790ae3583a75f6e1e85450714567280",
-                "reference": "9f9122ec7790ae3583a75f6e1e85450714567280",
+                "url": "https://api.github.com/repos/drupal/core/zipball/4e3ff46396a4a9587980d177e4a35dc49472e6ed",
+                "reference": "4e3ff46396a4a9587980d177e4a35dc49472e6ed",
                 "shasum": ""
             },
             "require": {
@@ -1210,7 +1210,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-11-05T14:32:32+00:00"
+            "time": "2018-11-06T16:31:37+00:00"
         },
         {
             "name": "drupal/jsonapi",
