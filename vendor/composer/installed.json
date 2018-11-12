@@ -2252,11 +2252,6 @@
                     "status": "not-covered",
                     "message": "Alpha releases are not covered by Drupal security advisories."
                 }
-            },
-            "patches_applied": {
-                "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch",
-                "Take the field label into account for entity references": "https://www.drupal.org/files/issues/2018-07-20/2987199-2.patch",
-                "Returning boolean type for promote to homepage": "https://www.drupal.org/files/issues/2018-08-30/promote_returning_boolean_value_instead_of_integer-2996099-2.patch"
             }
         },
         "installation-source": "dist",

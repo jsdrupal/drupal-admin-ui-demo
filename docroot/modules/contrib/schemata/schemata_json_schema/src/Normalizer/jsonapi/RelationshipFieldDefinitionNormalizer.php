@@ -6,7 +6,6 @@ use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
 use Drupal\Core\Field\FieldTypePluginManagerInterface;
 use Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem;
-use Drupal\jsonapi\ResourceType\ResourceType;
 
 /**
  * Normalizer for RelationshipFieldDefinitionNormalizer objects.
@@ -95,8 +94,6 @@ class RelationshipFieldDefinitionNormalizer extends ListDataDefinitionNormalizer
    *   The normalized relationship.
    */
   protected function normalizeRelationship(FieldDefinitionInterface $field_definition) {
-    /** @var \Drupal\jsonapi\ResourceType\ResourceTypeRepository $resource_type_repository */
-    $resource_type_repository = \Drupal::service('jsonapi.resource_type.repository');
     // A relationship has very similar schema every time.
     $resource_identifier_object = [
       'type' => 'object',
@@ -121,19 +118,9 @@ class RelationshipFieldDefinitionNormalizer extends ListDataDefinitionNormalizer
       $target_bundles = empty($handler_settings['target_bundles']) ?
         [$target_entity_type] :
         array_values($handler_settings['target_bundles']);
-      $target_resource_types = array_map(
-        function ($bundle) use ($target_entity_type, $resource_type_repository) {
-          return $resource_type_repository->get(
-            $target_entity_type,
-            $bundle ?: $target_entity_type
-          );
-          return $resource_type->getTypeName();
-        },
-        $target_bundles
-      );
-      $enum = array_map(function (ResourceType $resource_type) {
-        return $resource_type->getTypeName();
-      }, array_filter($target_resource_types));
+      $enum = array_map(function ($bundle) use ($target_entity_type) {
+        return sprintf('%s--%s', $target_entity_type, $bundle);
+      }, $target_bundles);
     }
     if ($cardinality == 1) {
       $data = $resource_identifier_object;
@@ -155,7 +142,7 @@ class RelationshipFieldDefinitionNormalizer extends ListDataDefinitionNormalizer
       'properties' => [
         'data' => $data,
       ],
-      'title' => $field_definition->getLabel(),
+      'title' => t('Resource Identifier'),
     ];
 
     return $normalized;
