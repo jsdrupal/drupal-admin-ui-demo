@@ -3291,12 +3291,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/jsdrupal/drupal-admin-ui-support-dist.git",
-            "reference": "355e02e8e0908ec5fecab7c400743cb126b0073f"
+            "reference": "f357449307c43e0374f6385c5258f0c172746fd0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/355e02e8e0908ec5fecab7c400743cb126b0073f",
-            "reference": "355e02e8e0908ec5fecab7c400743cb126b0073f",
+            "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/f357449307c43e0374f6385c5258f0c172746fd0",
+            "reference": "f357449307c43e0374f6385c5258f0c172746fd0",
             "shasum": ""
         },
         "require": {
@@ -3315,7 +3315,7 @@
             "phpmd/phpmd": "^2.6",
             "phpmetrics/phpmetrics": "^2.3"
         },
-        "time": "2018-12-03T08:15:57+00:00",
+        "time": "2018-12-03T21:02:10+00:00",
         "type": "drupal-module",
         "installation-source": "source",
         "notification-url": "https://packagist.org/downloads/",
