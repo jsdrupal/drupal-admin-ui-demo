@@ -1833,12 +1833,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-support-dist.git",
-                "reference": "bd2bb2fc22f2fa62d450f287db74e59fc89f6adb"
+                "reference": "355e02e8e0908ec5fecab7c400743cb126b0073f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/bd2bb2fc22f2fa62d450f287db74e59fc89f6adb",
-                "reference": "bd2bb2fc22f2fa62d450f287db74e59fc89f6adb",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/355e02e8e0908ec5fecab7c400743cb126b0073f",
+                "reference": "355e02e8e0908ec5fecab7c400743cb126b0073f",
                 "shasum": ""
             },
             "require": {
@@ -1860,10 +1860,10 @@
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "description": "Drupal support module for the v fancy React admin UI",
-            "time": "2018-11-29T17:12:47+00:00"
+            "time": "2018-12-03T08:15:57+00:00"
         },
         {
             "name": "masterminds/html5",
