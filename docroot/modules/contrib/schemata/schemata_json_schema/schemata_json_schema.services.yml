@@ -1,0 +1,122 @@
+services:
+  # ----------------------------------------------------------------------------
+  # - NORMALIZERS for each format.
+  # ----------------------------------------------------------------------------
+  # - 1. JSON format.
+  # ----------------------------------------------------------------------------
+
+  # References should be converted to other schema resources for the type.
+  # This priority ensures the DataReferenceDefinition is handled before
+  # DataDefinition. Since it is orthogonal to ComplexDataDefinition, they share
+  # the same priority.
+  serializer.normalizer.data_reference_definition.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\DataReferenceDefinitionNormalizer
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: normalizer, priority: 25 }
+
+  # Normalize complex data properties.
+  # This priority ensures the ComplexDataDefinition is handled before
+  # DataDefinition. Since it is orthagonal to DataReferenceDefinition, they
+  # share the same priority.
+  serializer.normalizer.complex_data_definition.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\ComplexDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 20 }
+
+  # Field definitions are a variant of List definitions, with additional access
+  # to the particular schema and configuration pieces from the field system. As
+  # a subclass of ListDataDefinitionInterface, FieldDefinitionInterface needs a
+  # higher priority.
+  serializer.normalizer.field_definition.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\FieldDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 30 }
+
+  # If the typed data definition is a list (as most are somewhere along the
+  # property hierarchy) this triggers the recursion to the next layer.
+  serializer.normalizer.list_data_definition.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\ListDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 20 }
+
+  # Typed data definitions in general can take many forms. This handles final items.
+  serializer.normalizer.data_definition.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\DataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+
+  # This is the main JSON Schema normalizer.
+  serializer.normalizer.schema.schema_json.json:
+    class: Drupal\schemata_json_schema\Normalizer\json\SchemataSchemaNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+  # ----------------------------------------------------------------------------
+  # - 2. JSON API format.
+  # ----------------------------------------------------------------------------
+  serializer.normalizer.complex_data_definition.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\ComplexDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 20 }
+  serializer.normalizer.field_definition.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\FieldDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 30 }
+  serializer.normalizer.relationship_field_definition.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\RelationshipFieldDefinitionNormalizer
+    arguments: ['@plugin.manager.field.field_type']
+    tags:
+      - { name: normalizer, priority: 35 }
+  serializer.normalizer.list_data_definition.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\ListDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 20 }
+  serializer.normalizer.data_definition.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\DataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+  serializer.normalizer.schema.schema_json.jsonapi:
+    class: Drupal\schemata_json_schema\Normalizer\jsonapi\SchemataSchemaNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+  # ----------------------------------------------------------------------------
+  # - 3. HAL+JSON format.
+  # ----------------------------------------------------------------------------
+  # Note: The HAL+JSON version of the Data Reference normalizer depends on the
+  # HAL module and is in registered in SchemataHalServiceProvider.
+
+  # Normalize complex data properties for HAL.
+  # This services is primarily used to short-circuit merging normalization of
+  # data references to the schema root.
+  serializer.normalizer.complex_data_definition.schema_json.hal_json:
+    class: Drupal\schemata_json_schema\Normalizer\hal\ComplexDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 25 }
+
+  # HAL version of FieldDefinition.
+  # This services is primarily used to short-circuit merging normalization of
+  # data references to the schema root.
+  serializer.normalizer.field_definition.schema_json.hal_json:
+    class: Drupal\schemata_json_schema\Normalizer\hal\FieldDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 35 }
+
+  # HAL version of the ListDataDefinition.
+  # This services is primarily used to short-circuit merging normalization of
+  # data references to the schema root.
+  serializer.normalizer.list_data_definition.schema_json.hal_json:
+    class: Drupal\schemata_json_schema\Normalizer\hal\ListDataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 25 }
+  serializer.normalizer.schema.schema_json.hal_json:
+    class: Drupal\schemata_json_schema\Normalizer\hal\SchemataSchemaNormalizer
+    tags:
+      - { name: normalizer, priority: 15 }
+  serializer.normalizer.data_definition.schema_json.hal_json:
+    class: Drupal\schemata_json_schema\Normalizer\hal\DataDefinitionNormalizer
+    tags:
+      - { name: normalizer, priority: 10 }
+
+  plugin.manager.schemata_json_schema.type_mapper:
+    class: Drupal\schemata_json_schema\Plugin\Type\TypeMapperPluginManager
+    arguments: ['@container.namespaces', '@module_handler']

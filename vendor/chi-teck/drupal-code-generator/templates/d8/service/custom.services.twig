@@ -1,0 +1,4 @@
+services:
+  {{ service_name }}:
+    class: Drupal\{{ machine_name }}\{{ class }}
+    arguments: ['@entity_type.manager']
