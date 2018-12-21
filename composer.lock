@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8d4acefa7662e4e4fc8f1b192d459ec",
+    "content-hash": "010165c79755852c1f3718d37651063c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1808,12 +1808,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-dist.git",
-                "reference": "e02eb0cecca1c0f3e4956d773bee3ace62bcc614"
+                "reference": "f773e93bd66bdb49d3b1b688e68870a96c95f92f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/e02eb0cecca1c0f3e4956d773bee3ace62bcc614",
-                "reference": "e02eb0cecca1c0f3e4956d773bee3ace62bcc614",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-dist/zipball/f773e93bd66bdb49d3b1b688e68870a96c95f92f",
+                "reference": "f773e93bd66bdb49d3b1b688e68870a96c95f92f",
                 "shasum": ""
             },
             "require": {
@@ -1825,7 +1825,7 @@
                 "MIT"
             ],
             "description": "This is the v fancy React admin UI for Drupal",
-            "time": "2018-12-19T16:10:35+00:00"
+            "time": "2018-10-25T17:12:49+00:00"
         },
         {
             "name": "justafish/drupal-admin-ui-support",
@@ -1833,12 +1833,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jsdrupal/drupal-admin-ui-support-dist.git",
-                "reference": "f357449307c43e0374f6385c5258f0c172746fd0"
+                "reference": "3f56f202e14f34d235a1bf6eb54fc80a4491b5bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/f357449307c43e0374f6385c5258f0c172746fd0",
-                "reference": "f357449307c43e0374f6385c5258f0c172746fd0",
+                "url": "https://api.github.com/repos/jsdrupal/drupal-admin-ui-support-dist/zipball/3f56f202e14f34d235a1bf6eb54fc80a4491b5bb",
+                "reference": "3f56f202e14f34d235a1bf6eb54fc80a4491b5bb",
                 "shasum": ""
             },
             "require": {
@@ -1860,10 +1860,10 @@
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "description": "Drupal support module for the v fancy React admin UI",
-            "time": "2018-12-03T21:02:10+00:00"
+            "time": "2018-09-12T09:29:22+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -7407,7 +7407,8 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "ext-pdo_sqlite": "*"
+        "ext-pdo_sqlite": "*",
+        "php": ">=7.0.8"
     },
     "platform-dev": []
 }

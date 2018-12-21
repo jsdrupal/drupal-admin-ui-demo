@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'mtw4g1ROas2b4k1VRRe1eQBJ7L4D7gIYU9yRecPG88E4ddtJqm7SuByk2NYJDjBrmMubdd1K0g';
 
 /**
  * Deployment identifier.
@@ -768,4 +768,18 @@ $settings['entity_update_batch_size'] = 50;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+$settings['trusted_host_patterns'] = [
+  '^drupal$',
+  '^127\.0\.0\.1$',
+];
 $config_directories['sync'] = '../config/sync';
+$databases['default']['default'] = array (
+  'database' => 'drupal',
+  'username' => 'drupal',
+  'password' => 'drupal',
+  'prefix' => '',
+  'host' => 'mysql',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
