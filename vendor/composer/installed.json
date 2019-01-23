@@ -2116,7 +2116,7 @@
             },
             "drupal": {
                 "version": "8.x-1.23",
-                "datestamp": "1545243863",
+                "datestamp": "1532084496",
                 "security-coverage": {
                     "status": "covered",
                     "message": "Covered by Drupal's security advisory policy"
@@ -2169,6 +2169,7 @@
         "require-dev": {
             "drupal/jsonapi": "^1.18"
         },
+        "time": "2018-07-30T17:06:09+00:00",
         "type": "drupal-module",
         "extra": {
             "branch-alias": {
@@ -7413,6 +7414,51 @@
             }
         ],
         "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths."
+    },
+    {
+        "name": "zaporylie/composer-drupal-optimizations",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zaporylie/composer-drupal-optimizations.git",
+            "reference": "cc5eb9f0b5fa664885765748ce5190c1de7d2571"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zaporylie/composer-drupal-optimizations/zipball/cc5eb9f0b5fa664885765748ce5190c1de7d2571",
+            "reference": "cc5eb9f0b5fa664885765748ce5190c1de7d2571",
+            "shasum": ""
+        },
+        "require": {
+            "composer-plugin-api": "^1.1",
+            "drupal/core": "^8.5"
+        },
+        "require-dev": {
+            "composer/composer": "^1.6"
+        },
+        "time": "2018-07-15T18:04:58+00:00",
+        "type": "composer-plugin",
+        "extra": {
+            "class": "zaporylie\\ComposerDrupalOptimizations\\Plugin"
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "zaporylie\\ComposerDrupalOptimizations\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0-or-later"
+        ],
+        "authors": [
+            {
+                "name": "Jakub Piasecki",
+                "email": "jakub@piaseccy.pl"
+            }
+        ],
+        "description": "Composer plugin to improve composer performance for Drupal projects"
     },
     {
         "name": "zendframework/zend-diactoros",
