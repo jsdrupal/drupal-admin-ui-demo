@@ -280,7 +280,7 @@ $config_directories = [];
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = 'i71qV4sdx4KNuTnrQGWWSRdpf8punGepXpc4FLmW1V5dBbJNRg_G0XSqudU9e_P1bMHSlj-tdQ';
+$settings['hash_salt'] = '8A7MAc9GQT16QIDuX-rAgHXC45xJn3eKWJNpQxQZ8SwFY5F90ml7TXlXr4rCfR0ILRvDXAF1nQ';
 
 /**
  * Deployment identifier.
@@ -753,6 +753,15 @@ $settings['file_scan_ignore_directories'] = [
  * larger number of entities to be processed in a single batch run.
  */
 $settings['entity_update_batch_size'] = 50;
+
+/**
+ * Entity update backup.
+ *
+ * This is used to inform the entity storage handler that the backup tables as
+ * well as the original entity type and field storage definitions should be
+ * retained after a successful entity update process.
+ */
+$settings['entity_update_backup'] = TRUE;
 
 /**
  * Load local development override configuration, if available.
